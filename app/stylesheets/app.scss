@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+
+@import 'tools/_normalize';
+
+body {
+  font-family: 'PT Serif', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wedding {
+  padding: 50px 0;
+  min-height: 650px;
+  height: 100vh;
+  background: url('../images/bg.jpg') no-repeat center center / cover;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.wedding-inner {
+  padding: 0 30px;
+  width: 100%;
+  max-width: 760px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.wedding-title {
+  background: url('../images/title.svg') no-repeat center center / contain;
+  width: 100%;
+  max-width: 478px;
+  height: 75px;
+}
+
+.wedding-date {
+  margin-top: 17px;
+  padding-top: 30px;
+  font-size: 26px;
+  color: #FFFFFF;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: #FFFFFF;
+  }
+}
+
+.wedding-text {
+  margin-top: 40px;
+
+  font-size: 26px;
+  color: #FFFFFF;
+  line-height: 30px;
+}
+
+.form {
+  width: 100%;
+  margin-top: 50px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 15px 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-align: center;
+
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #FFF;
+
+  width: 100%;
+  max-width: 310px;
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+
+::-moz-placeholder {
+  color: #FFFFFF;
+}
+
+:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+:-moz-placeholder {
+  color: #FFFFFF;
+}
+
+button {
+  padding: 14px 20px;
+  margin-top: 30px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  outline: none;
+
+  transition: background .2s ease, color .2s ease;
+  will-change: transition, color;
+
+  &:hover {
+    background: #FFFFFF;
+    color: #000000;
+  }
+}
+
+@media (max-width: 500px) {
+  .wedding {
+    height: 100vh;
+  }
+
+  .wedding-date {
+    margin-top: 5px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .wedding-text {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .form {
+    margin-top: 20px;
+  }
+
+  button {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 374px) {
+  .wedding {
+    padding: 0;
+    min-height: 568px;
+  }
+
+  .wedding-date {
+    font-size: 18px;
+  }
+
+  .wedding-inner {
+    padding: 0 15px;
+  }
+
+  .wedding-text {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
